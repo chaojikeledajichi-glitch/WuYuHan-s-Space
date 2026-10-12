@@ -1,0 +1,69 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1789377942834,
+      "tag": "0000_fantastic_jigsaw",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790878538545,
+      "tag": "0001_meituan_prepared_preview",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791047734971,
+      "tag": "0002_business_third_cover",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1791048284447,
+      "tag": "0003_meituan_ipr_prepared_preview",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1791048763082,
+      "tag": "0004_foodie_growth_project",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1791049221594,
+      "tag": "0005_foodie_report_prepared_preview",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1791049478907,
+      "tag": "0006_drurse_visual_project",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1791049992092,
+      "tag": "0007_drurse_prepared_preview",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1791050396453,
+      "tag": "0008_swap_ipr_hi_translate",
+      "breakpoints": true
+    }
+  ]
+}

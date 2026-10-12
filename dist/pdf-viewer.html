@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>项目 PDF</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;font:14px/1.6 system-ui,sans-serif;color:#4b453b}.pdf-reader{min-width:0}.pdf-long-page{position:relative;margin:0 0 12px;background:#fff}.pdf-page-pending{min-height:80px}.pdf-page-placeholder{display:block;padding:20px;color:#766c5a}.pdf-page-strip{width:100%;overflow:hidden;background:#fff}.pdf-page-strip canvas{display:block;width:100%;height:100%}.pdf-page-text{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:pre-wrap}[data-pdf-status]{margin:0;padding:16px}.pdf-retry{margin:0 16px 16px;padding:10px 16px;border:1px solid #bdae95;border-radius:4px;background:#faf8f3;color:inherit;font:inherit;cursor:pointer}.pdf-page-pending:has(.pdf-page-strip){min-height:0}
+</style>
+<script src="/project-pdf.js?v=3" defer></script>
+</head>
+<body><section class="pdf-reader" aria-label="PDF 内容"><p data-pdf-status role="status">正在读取 PDF…</p><div data-pdf-pages></div></section>
+<script>
+window.addEventListener('DOMContentLoaded',()=>{
+ const file=new URLSearchParams(location.search).get('file')||'',root=document.querySelector('.pdf-reader');
+ if(!/^\/media\/projects\/[0-9a-f-]{36}\.pdf$/.test(file)){root.querySelector('[data-pdf-status]').textContent='PDF 地址无效。';return;}
+ if(!window.ProjectPDF){root.querySelector('[data-pdf-status]').textContent='PDF 阅读器暂时无法启动，请刷新页面。';return;}
+ const stop=window.ProjectPDF.mount(root,file);window.addEventListener('pagehide',stop,{once:true});
+});
+</script></body></html>

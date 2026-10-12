@@ -1,0 +1,15 @@
+.hanger,.object-face,.hanging-visual,.hanging-asset,.object-sheen,.stationary-pin{position:absolute;inset:0;pointer-events:none}
+.hanger{z-index:1}
+.hanger.is-lifted,.hanger:focus-within{z-index:10}
+.hanger>button.object{pointer-events:auto;background:none!important;filter:none!important}
+.object-face{transform:none;transition:none!important}
+.object-label{pointer-events:none;cursor:default}
+.object-label:before,.hanger>button.object:before{display:none}
+.hanging-visual,.stationary-pin,.object-sheen{display:none}
+.layers-ready .hanging-visual,.layers-ready .stationary-pin,.layers-ready .object-sheen{display:block}
+.hanging-asset,.stationary-pin{background:url('assets/pegboard.png') 0 0/100% 100% no-repeat}
+.hanging-asset,.object-sheen,.stationary-pin{mask-size:100% 100%;mask-position:0 0;mask-repeat:no-repeat}
+.stationary-pin{z-index:11;mask-image:url('assets/masks/pins.svg')}
+.object-sheen{opacity:0;background:linear-gradient(115deg,transparent 32%,#fff8 46%,#fff 49%,#fff2 55%,transparent 65%);background-size:230% 100%;mix-blend-mode:screen}
+.board-art{transform:none;opacity:1}
+@media(max-width:600px){footer{gap:10px;flex-wrap:wrap}}
